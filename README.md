@@ -1,6 +1,6 @@
 # CA229 Group Project
 
-
+This is our group project page for CA229. We have to create a webpage for a fitness app.
 
 ## Getting started
 

@@ -1,13 +1,5 @@
 # CA229 Group Project
 
-This is our group project page for CA229. We have to create a webpage for a fitness app which is to be decided.
-
-Group members:
-- Adam Gilroy
-- 
-- 
-- 
-
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.

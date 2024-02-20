@@ -4,9 +4,9 @@ This is our group project page for CA229. We have to create a webpage for a fitn
 
 Group members:
 - Adam Gilroy
-- Finian Duffy
-- Eoghan Lacey
-- Isobel Murphy
+- 
+- 
+- 
 
 ## Getting started
 

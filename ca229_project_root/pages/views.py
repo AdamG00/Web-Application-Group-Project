@@ -2,44 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from . models import Page
 
-def index(request):
-    pg = Page.objects.get(permalink='/')
+def index(request, pagename=''):
+    pagename = '/' + pagename
+    pg = Page.objects.get(permalink=pagename)
     context = {
-	'title': pg.title,
-	'content': pg.bodytext
-    }
-    return render(request, 'base.html', context)
-
-def about(request):
-    pg = Page.objects.get(permalink='/about')
-    context = {
-	'title': pg.title,
-	'content': pg.bodytext
-    }
-    return render(request, 'base.html', context)
-
-def login(request):
-    pg = Page.objects.get(permalink='/login')
-    context = {
-	'title': pg.title,
-	'content': pg.bodytext
-    }
-    return render(request, 'base.html', context)
-
-def signup(request):
-    pg = Page.objects.get(permalink='/signup')
-    context = {
-	'title': pg.title,
-	'content': pg.bodytext
-    }
-    return render(request, 'base.html', context)
-
-def magic(request):
-    pg = Page.objects.get(permalink='/magic')
-    context = {
-	'title': pg.title,
-	'content': pg.bodytext
-    }
-    return render(request, 'base.html', context)
+		'title': pg.title,
+		'content': pg.bodytext, # note the end-of-line comma
+		'last_updated': pg.update_date,
+		'page_list': Page.objects.all(),
+	}
+    return render(request, 'pages/page.html', context)
 
 # Create your views here.

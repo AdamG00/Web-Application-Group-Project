@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}
+				Untitled Document
+			{% endblock title %}
+		</title>
+		<link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'favicon.ico' %}" rel="icon" type="image/x-icon">
+	</head>
+	<body>
+		<div id="navbar">
+			<div id="logo" class="logo-container">
+				<img src="{% static 'logo.png' %}" alt="">
+			</div>
+			<nav id="nav">
+				<ul>
+					{% block navbar %}
+						<li>Menu 1</li>
+						<li>Menu 2</li>
+						<li>Menu 3</li>
+					{% endblock navbar %}
+				</ul>
+			</nav>
+		</div>
+		<div id="wrapper">
+			<section id="main">
+				{% block main_content %}
+					<h1>{{ title }}</h1>
+					{% autoescape off %}
+					<p>{{ content}}</p>
+					{% endautoescape %}
+				{% endblock main_content %}
+			</section>
+		</div>
+		<footer id="footer">Copyright &copy; 2024 FitChallenge.co</footer>
+	</div>
+	</body>
+</html>

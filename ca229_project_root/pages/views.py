@@ -7,6 +7,7 @@ def index(request):
     context = {
 		'title': pg.title,
 		'content': pg.bodytext,
+        'daily': pg.daily_challenge,
 		'last_updated': pg.update_date,
 		'page_list': Page.objects.all(),
 	}

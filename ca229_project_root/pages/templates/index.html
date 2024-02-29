@@ -31,8 +31,11 @@
 				{% block main_content %}
 					<h1>{{ title }}</h1>
 					{% autoescape off %}
-					<p>{{ content}}</p>
+					<p>{{ content }}</p>
 					{% endautoescape %}
+					<div class="daily-challenge">
+                        <p>{{ daily }}</p>
+                    </div>
 				{% endblock main_content %}
 			</section>
 		</div>

@@ -26,7 +26,6 @@
 				</ul>
 			</nav>
 		</div>
-		<div id="Back-ground">
 		<div id="wrapper">
 			<section id="main">
 				{% block main_content %}
@@ -35,12 +34,31 @@
 					<p>{{ content }}</p>
 					{% endautoescape %}
 					<div class="daily-challenge">
-                        <p>{{ daily }}</p>
-                    </div>
+						<p>Daily Challenge</p>
+						<p>{{ daily }}</p>
+						{% if joined %}
+							<button class="joined" disabled>Joined</button>
+						{% else %}
+							<button class="join-button">Join</button>
+						{% endif %}
+					</div>
 				{% endblock main_content %}
 			</section>
 		</div>
 		<footer id="footer">Copyright &copy; 2024 FitChallenge.co</footer>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				document.getElementById("joinButton").addEventListener("click", function () {
+					var button = document.getElementById("joinButton");
+					if (button.innerHTML === "Join") {
+						button.innerHTML = "Joined";
+						button.classList.add("joined");
+						button.disabled = true;
+						alert("You have joined this event!");
+					}
+				});
+			});
+		</script>
 	</div>
 	</body>
 </html>

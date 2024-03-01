@@ -1,40 +1,14 @@
 @charset "utf-8";
 
-#main-background {
-	background-image: url('background.jpg');
-	position: relative;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.daily-challenge {
-	padding: 10px;
-	margin-top: 20px;
-	color: #FFFFFF;
-}
-
 body {
-	background-color: #E0E0E0;
+	background-color: #474747;
 	font-family: Arial;
 	font-size: 0.9em;
 	text-align: justify;
-	color: #474747;
-}
-
-.daily-challenge {
-    background-color: #6e6e6e;
-    padding: 10px;
-    margin-top: 20px;
+	color: #ffffff;
+	background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .logo-container img {
@@ -106,9 +80,31 @@ body {
 }
 
 #main {
-	margin-top: 25px;
+	margin-top: 100px;
 	text-align: center;
 	padding: 0 20px;
+}
+
+.daily-challenge {
+    background-color: #ffffff;
+	border-radius: 10px;
+	color: #474747;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.join-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.joined {
+    background-color: green;
+    cursor: not-allowed;
 }
 
 #footer {

@@ -1,4 +1,4 @@
-{% extends "signup.html" %}
+{% extends "about.html" %}
 {% block title %}
 	{{ title }}
 {% endblock title %}
@@ -10,9 +10,35 @@
 {% endblock navbar %}
 
 {% block main_content %}
-	<h1>Welcome to the {{ title }} page!</h1>
-	<p>We're now using the page template.</p>
+<style>
+	#main {
+		border: 2px solid #000000; /* Adds a 2px solid black border */
+		padding: 20px; /* Adds some spacing inside the border */
+		box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+	}
+</style>
+	<h1>About Fitchallenge!</h1>
+	<p>Fitchallenge is a vibrant fitness challenge platform designed to inspire, motivate, 
+		and engage individuals passionate about fitness and well-being. Our daily challenges 
+		and group activities offer a unique and interactive way to stay fit and connect with 
+		like-minded fitness enthusiasts.</p>
+	
+	<div style="background-color: rgb(144, 144, 144); padding: 10px;"></div>
+	<h2>What We Offer:</h2>
 	{% autoescape off %}
-	<p>{{ content }}</p>
+	<ul>
+		<li><strong>Daily Fitness Challenges:</strong> Each day brings a new challenge to keep your fitness journey exciting. Sign up and push your limits!</li>
+        <li><strong>Goal-Oriented Groups:</strong> Join groups that align with your fitness goals. Participate in daily challenges tailored to your group’s objectives.</li>
+        <li><strong>Community-Driven Content:</strong> Have an idea for a fitness challenge? Submit your challenges and see them inspire the whole community, possibly becoming the challenge of the day or featured in a specific group.</li>
+        <li><strong>Track Your Progress:</strong> Create your account, join challenges, and mark them as completed or attempted. Watch your progress and stay motivated!</li>
+	</ul>
+
+	<p>At Fitchallenge, we believe in the power of community and the personal growth that comes 
+		from consistent, fun, and engaging challenges. Join us today and take your first step 
+		towards a fitter, happier you!</p>
+
+	<h2> Our Mission</h2>
+
+	<h3> Our Team</h3>
 	{% endautoescape %}
 {% endblock main_content %}

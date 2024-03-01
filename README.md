@@ -1,5 +1,8 @@
 # CA229 Group Project
-
+Adam Gilroy (adam.gilroy4@mail.dcu.ie)
+Eoghan Lacey (eoghan.lacey6@mail.dcu.ie)
+Finian Duffy (duffy.finian2@mail.dcu.ie)
+Isobel Murphy (isobel.murphy6@mail.dcu.ie)
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.

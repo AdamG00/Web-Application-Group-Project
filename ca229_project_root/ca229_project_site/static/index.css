@@ -93,18 +93,12 @@ body {
     margin-top: 20px;
 }
 
-.join-button {
-    background-color: blue;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
+.joinButton {
+    background-color: #3884e7;
 }
 
-.joined {
-    background-color: green;
-    cursor: not-allowed;
+.joinButton.joined {
+    background-color: #0fcb1b;
 }
 
 #footer {

@@ -17,9 +17,15 @@
         <br>
         <br>
         <div class="daily-challenge">
-            <p>Daily Challenge</p>
-            <p>{{ daily }}</p>
-            <button id="joinButton" class="button button-join">Join</button>
+            <div class="challenge-header">
+                <h2>Daily Challenge</h2>
+            </div>
+            <div class="challenge-details">
+                <p>{{ daily }}</p>
+            </div>
+            <div class="challenge-action">
+                <button id="joinButton" class="button button-join">Join</button>
+            </div>
         </div>
         <script>
     		document.getElementById("joinButton").addEventListener("click", function() {

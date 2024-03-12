@@ -89,16 +89,11 @@ body {
     background-color: #ffffff;
 	border-radius: 10px;
 	color: #474747;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-.joinButton {
-    background-color: #3884e7;
-}
-
-.joinButton.joined {
-    background-color: #0fcb1b;
+    padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: -30px;
+	padding-right: -30px;
+    margin-top: 10px;
 }
 
 #footer {

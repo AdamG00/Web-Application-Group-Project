@@ -19,23 +19,16 @@
         <div class="daily-challenge">
             <p>Daily Challenge</p>
             <p>{{ daily }}</p>
-            {% if joined %}
-                <button class="joined" disabled>Joined</button>
-            {% else %}
-                <button class="join-button">Join</button>
-            {% endif %}
+            <button id="joinButton" class="button button-join">Join</button>
         </div>
         <script>
-			document.addEventListener("DOMContentLoaded", function () {
-				document.getElementById("joinButton").addEventListener("click", function () {
-					var button = document.getElementById("joinButton");
-					if (button.innerHTML === "Join") {
-						button.innerHTML = "Joined";
-						button.classList.add("joined");
-						button.disabled = true;
-						alert("You have joined this event!");
-					}
-				});
-			});
+    		document.getElementById("joinButton").addEventListener("click", function() {
+        		var button = document.getElementById("joinButton");
+        		if (button.innerHTML === "Join") {
+            	button.innerHTML = "Joined";
+                button.classList.add("joined");
+            	alert("You have joined this event!");
+        		}
+    		});
 		</script>
 {% endblock main_content %}

@@ -1,6 +1,6 @@
 @charset "utf-8";
 body {
-	background-color: #E0E0E0;
+	background-color: #ffffff;
 	font-family: Arial;
 	font-size: 0.9em;
 	text-align: justify;
@@ -76,7 +76,7 @@ body {
 }
 
 #main {
-	margin-top: 200px;
+	margin-top: 70px;
 	text-align: center;
 	padding: 0 20px;
 }
@@ -84,7 +84,7 @@ body {
 #footer {
 	text-align: center;
 	font-size: 0.8em;
-	margin-top: 500px;
+	margin-top: 80px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background-color: #FFFFFF;

@@ -10,6 +10,22 @@
 {% endblock navbar %}
 
 {% block main_content %}
+<style>
+    #main-content {
+        display: none;
+        border: 2px solid grey;
+        padding: 20px;
+        margin: 20px;
+    }
+    .section {
+        border-bottom: 1px solid grey; 
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .section:last-child {
+        border-bottom: none;
+    }
+</style>
 
 <div id="main-content" style="display:none;">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

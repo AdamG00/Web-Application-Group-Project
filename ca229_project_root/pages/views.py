@@ -52,3 +52,10 @@ def magic(request):
 		'page_list': Page.objects.all(),
 	}
     return render(request, 'pages/magicpage.html', context)
+def magic_page(request, num1, op, num2, op2, num3):
+    result = 0
+    if op == '+' and op2 == '+':
+        result = num1 + num2 + num3
+    elif op == '-' and op2 == '-':
+        result = num1 - num2 - num3
+    return render(request, 'magic.html', {'result': result})

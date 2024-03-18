@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block navbar %}
+    {% for page in page_list %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+{% endblock navbar %}
+
+{% block main_content %}
+        <h1>Welcome to the FitChallenge {{ title }} page.</h1>
+        {% autoescape off %}
+        <p>{{ content }}</p>
+        {% endautoescape %}
+        <br>
+        <br>
+        <div class="daily-challenge">
+            <div class="challenge-header">
+                <h2>Daily Challenge</h2>
+            </div>
+            <div class="challenge-details">
+                <p>{{ daily }}</p>
+            </div>
+            <div class="challenge-action">
+                <button id="joinButton" class="button button-join">Join</button>
+            </div>
+        </div>
+        <script>
+    		document.getElementById("joinButton").addEventListener("click", function() {
+        		var button = document.getElementById("joinButton");
+        		if (button.innerHTML === "Join") {
+            	button.innerHTML = "Joined";
+                button.classList.add("joined");
+            	alert("You have joined this event!");
+        		}
+    		});
+		</script>
+{% endblock main_content %}

@@ -15,10 +15,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     $(document).ready(function(){
-        // Gradually reveal the main content to enhance user engagement
+        // Fade in the main content
         $("#main-content").fadeIn(1000);
 
-        // Sequentially animate each section for a dynamic page experience
+        // Animate each section
         $(".section").each(function(index) {
             $(this).delay(300 * index).animate({opacity: '1'}, 800);
         });

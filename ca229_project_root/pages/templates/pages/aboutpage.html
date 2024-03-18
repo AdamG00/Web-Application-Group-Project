@@ -1,0 +1,86 @@
+{% extends "about.html" %}
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block navbar %}
+    {% for page in page_list %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+{% endblock navbar %}
+
+{% block main_content %}
+
+<div id="main-content" style="display:none;">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // Fade in the main content
+        $("#main-content").fadeIn(1000);
+
+        // Animate each section
+        $(".section").each(function(index) {
+            $(this).delay(300 * index).animate({opacity: '1'}, 800);
+        });
+    });
+    </script>
+
+    <div class="section">
+        <h1>ABOUT FITCHALLENGE</h1>
+        <p>Fitchallenge is everything you would want from a fitness application. Fitchallange is a vibrant fitness challenge platform 
+            designed to inspire, motivate, and engage individuals passionate about fitness and well-being, to be brave and grab life 
+            as the extraordinary adventure it is. Our daily challenges and group activities offer a unique and interactive 
+            way to stay fit and connect with like-minded fitness enthusiasts, allowing you to bond over shared interests.</p>
+    </div>
+
+    <div class="section">
+        <h2>WHAT WE OFFER</h2>
+        {% autoescape off %}
+        <ul>
+            <li><strong>Daily Fitness Challenges:</strong> With access to 200+ free workouts and targeted training programmes across
+                strength, endurance, yoga and mobility targeting your abs, arms, shoulders, glutes and legs. 
+                Each day brings a new challenge to keep your fitness journey exciting. 
+                Sign up and push your limits!hi</li>
+            <li><strong>Goal-Oriented Groups:</strong> Join groups that align with your fitness goals and interests. Participate in daily 
+                challenges tailored to your group’s objectives that have certain milestones for you to hit, or maybe if you are just at the 
+            start of your journey, just try your best!</li>
+            <li><strong>Community-Driven Content:</strong> Have an idea for a fitness challenge? Submit your challenges to us and 
+                see them inspire the whole community of fitness friends, your challange could even possibly become the challenge of the day 
+                or featured in a specific group.</li>
+            <li><strong>Track Your Progress:</strong> Create your account, join challenges. Celebrate your hard work along the way 
+                with trophies and milestones. 
+                Our Activity tab records your achievements, so you stay motivated to train consistently, then mark them as completed or 
+                attempted and Watch your progress and stay motivated!</li>
+        </ul>
+        {% endautoescape %}
+    </div>
+
+    <div class="section">
+        <p>At Fitchallenge, we believe in the power of community and the personal growth that comes 
+            from consistent, fun, and engaging challenges. Join us today and take your first step 
+            towards a fitter, happier you!</p>
+    </div>
+
+    <div class="section">
+        <h2>OUR MISSION</h2>
+        <p>Our mission is to empower individuals to lead healthier lives by providing accessible and enjoyable fitness challenges 
+            and activities that promote physical and mental well-being.</p>
+        <p>We aim to create an inclusive environment where everyone feels supported, motivated, and inspired to reach their 
+            fitness goals, regardless of their background, fitness level, or previous experience.</p>
+        <p>Through our platform, we strive to foster a sense of community where members can connect, share their achievements, 
+            and support each other on their fitness journeys.</p>
+    </div>
+
+    <div class="section">
+        <h2>OUR TEAM</h2>
+        <p>Meet our dedicated team of fitness enthusiasts and professionals who are committed to helping you achieve your fitness goals 
+            and fostering a supportive community environment.</p>
+        <p>Our team consists of experienced fitness trainers, nutritionists, developers, and customer support specialists 
+            who work tirelessly to ensure that your experience on Fitchallenge is enjoyable, rewarding, and beneficial 
+            to your health and well-being.</p>
+        <p>We are passionate about fitness and wellness, and we are here to provide you with the guidance, motivation, and 
+            support you need to succeed on your fitness journey. Together, let's make fitness fun, accessible, and rewarding 
+            for everyone!</p>
+    </div>
+</div>
+{% endblock main_content %}
